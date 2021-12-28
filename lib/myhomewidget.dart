@@ -71,7 +71,7 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin{
                       ),
                       onChanged: (val) =>
                       setState(() {
-                        val1 = val.trim().length;
+                        val1 = val.replaceAll(' ', '').length;
                         if(val1 == val2){
                           setRotation(0);
                           controller.forward(from: degree);
@@ -103,7 +103,7 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin{
                       ),
                       onChanged: (val) =>
                           setState(() {
-                            val2 = val.trim().length;
+                            val2 = va2.replaceAll(' ', '').length;
                             if(val1 == val2){
                               setRotation(0);
                               controller.forward(from: degree);
